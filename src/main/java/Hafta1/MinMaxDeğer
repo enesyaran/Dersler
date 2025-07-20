@@ -1,0 +1,30 @@
+public static void main(String[] args) {
+        Scanner scanner =  new Scanner(System.in); // Scanner tanımlandı
+
+        System.out.println("Kaç Tane Sayı Girmek İstiyorsunuz?");
+        int sayi = scanner.nextInt();
+
+        int i = 2;
+        System.out.println("1 . Sayıyı Giriniz: ");
+
+        int sayi1 = scanner.nextInt(); // 1. sayıyı aldık
+        int enBuyuk = sayi1; // en büyük sayıyı 1. sayı olarak belirledik
+        int enKucuk = sayi1; // en küçük sayıyı 1. sayı olarak belirledik
+        while (i <= sayi) {
+            System.out.println(i + ". Sayıyı Giriniz: "); // 2. sayıyı aldık
+            int sayi2 = scanner.nextInt();
+
+            if (sayi2 > enBuyuk) {
+                enBuyuk = sayi2; // en büyük sayıyı 2. sayı olarak belirledik
+            }
+
+            if (sayi2 < enKucuk) {
+                enKucuk = sayi2; // en küçük sayıyı 2. sayı olarak belirledik
+            }
+            i++;
+        }
+        System.out.println("En Büyük Sayı: " + enBuyuk);
+        System.out.println("En Küçük Sayı: " + enKucuk);
+
+    }
+}
