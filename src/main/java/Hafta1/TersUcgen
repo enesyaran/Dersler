@@ -1,0 +1,19 @@
+package Hafta1;
+
+import java.util.Scanner;
+
+public class TersUcgen {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Bir sayı giriniz: ");
+        int sayi = scanner.nextInt();
+
+        for (int i = sayi; i>=1; i--){// i değerini sayıdan 1 e kadar düşürüyor.
+            for (int b=1; b<=i; b++){//Yıldız yazdırması için.
+                System.out.print("*");
+            }
+            System.out.println();//iki üstteki for döngüsüne bağlı alt stıra geçiyor.
+        }
+        }
+
+    }
