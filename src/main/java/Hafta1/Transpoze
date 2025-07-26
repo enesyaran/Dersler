@@ -1,0 +1,39 @@
+package Hafta1;
+
+public class Transpoze {
+    public static void main(String[] args) {
+
+        int[][] matris = {
+                {1, 2, 3},
+                {4, 5, 6}
+        };
+
+        // Transpoz matris 3x2 boyutunda olmalı (satır-sütun yer değiştirir)
+        int[][] transpoz = new int[3][2];
+
+        // Transpoz alma işlemi: matris[i][j] -> transpoz[j][i]
+        for (int i = 0; i < matris.length; i++) { // satırları dolaş
+            for (int j = 0; j < matris[0].length; j++) { // sütunları dolaş
+                transpoz[j][i] = matris[i][j]; // transpoz matrisine yerleştir
+            }
+        }
+
+        // Orijinal matrisi ekrana yazdır
+        System.out.println("Orijinal Matris:");
+        yazdirMatris(matris);
+
+        // Transpoz matrisi ekrana yazdır
+        System.out.println("\nTranspoz Matris:");
+        yazdirMatris(transpoz);
+    }
+
+    // Matrisi ekrana düzgün formatta yazdıran yardımcı metod
+    public static void yazdirMatris(int[][] matris) {
+        for (int i = 0; i < matris.length; i++) { // her satır için
+            for (int j = 0; j < matris[i].length; j++) { // her sütun için
+                System.out.print(matris[i][j] + "\t"); // elemanı yazdır, tab boşluğu bırak
+            }
+            System.out.println(); // satır sonu, alt satıra geç
+        }
+    }
+}
