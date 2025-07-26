@@ -1,0 +1,20 @@
+package Hafta1;
+
+import java.util.Scanner;
+
+public class TipDonusumu {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir  tam sayı giriniz: ");
+        int Tam = scanner.nextInt();
+
+        System.out.print("Bir  ondalık sayı giriniz: ");
+        double ondalık = scanner.nextDouble();
+
+        double myDouble = Tam;// tam sayıdan ondalığa dönüşüm
+
+        int Myint = (int) ondalık; // ondalıktan tam sayıya dönüşüm
+
+        System.out.println("Ondalık sayı "+ myDouble);
+        System.out.println("Tam sayı " + Myint);
